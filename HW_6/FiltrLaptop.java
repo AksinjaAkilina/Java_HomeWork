@@ -45,10 +45,19 @@ public class FiltrLaptop {
         System.out.println("диагональ");
         double digUser = sc.nextDouble();
         for (Laptop lap : unicLaptop) {
-            if ((lap.getRam() >= ramUser) && (lap.getStorageCap() >= storUser) && lap.getDiagonal() >= digUser) {
+            if ((lap.getRam() == ramUser) && (lap.getStorageCap() == storUser) && lap.getDiagonal() == digUser) {
                 System.out.println(lap.toString());
             }
-        }
+            else if ((lap.getRam() == ramUser) && (lap.getStorageCap() == storUser)) {
+                System.out.println(lap.toString());
+            }
+            else if ((lap.getRam() == ramUser) && (lap.getDiagonal() == digUser)) {
+                System.out.println(lap.toString());            
+            }
+            else if ((lap.getStorageCap() == storUser) && (lap.getDiagonal() == digUser)) {
+                System.out.println(lap.toString());
+            }                                   
+        }        
         sc.close();
     }
 }
